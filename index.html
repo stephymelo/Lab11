@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="nuevaPublicacion">
+     
+      <input id="usuario" placeholder="Escriba nombre de usuario" type="text">
+     <br>
+     <input id="publicacion" placeholder="Escriba tu publicacion" type="text">
+     <br>
+     <button id="publicar"  type="text">Publicar</button>
+    </div>
+
+    <p id="feedTitle"> Feed News</p>
+    
+    <div id="publicacionContainer">
+    
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC2l0Mu7TDowOyO-Sy65Fsl-Otk2PXD5Js",
+    authDomain: "lab11-21e7d.firebaseapp.com",
+    databaseURL: "https://lab11-21e7d.firebaseio.com",
+    projectId: "lab11-21e7d",
+    storageBucket: "lab11-21e7d.appspot.com",
+    messagingSenderId: "996565340058",
+    appId: "1:996565340058:web:391582bd8eca0c3f553423",
+    measurementId: "G-PSJWWYBCTW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+</script>
+<script src="./componentes/comentario.js"></script>
+    <script src="./componentes/Publicacion.js"></script>
+    <script src="logic.js"></script>
+    
+
+
+    
+</body>
+</html>

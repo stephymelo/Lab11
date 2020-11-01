@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    width: 250px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    border-color: #6db1de;
+    border-style: solid;
+}
+
+button{
+    margin-top:5px;
+    background-color: #fa4881;
+    border-style: none;
+    padding: 5px;
+    color:white;
+
+}
+
+.publicacionClass{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 10px;
+    max-width: 300px;
+    background-color:#6db1de;
+    border-radius: 10px;
+    position: relative;
+}
+
+.username{
+    color:gray;
+
+
+}
+
+.publicacion{
+    
+    font-weight: bold;
+
+}
+
+div .responderBtn{
+    position: absolute;
+    right: 10px;
+    top:10px;
+
+}
+
+.containerComentario{
+    
+   
+}
+
+.comentarioDiv{
+ 
+    background-color: indigo;
+}
+
+.comment{
+
+    padding: 5px;
+    margin: 5px;
+    height: 20px;
+    background-color: white;
+    
+}
+
+.commentinside{
+    color:black;
+}
