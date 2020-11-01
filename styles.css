@@ -65,11 +65,11 @@ div .responderBtn{
 
     padding: 5px;
     margin: 5px;
+    margin-top:10px;
     height: 20px;
     background-color: white;
+    width: 250px;
+    border-radius: 5px;
     
 }
 
-.commentinside{
-    color:black;
-}

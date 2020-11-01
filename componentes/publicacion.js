@@ -21,40 +21,42 @@ class Publicacion{
         let publiCont = document.createElement('div');
         publiCont.className = 'publicacion';
         publiCont.innerHTML = this.publicaciones.p;
+        publiCont.appendChild(userCont);
 
         let responderBtn = document.createElement('button');
         responderBtn.className = 'responderBtn'
         responderBtn.innerHTML = "Responder"
 
-
-
-
-        let comentarioDiv = document.createElement("div");
-
-        let comentarioInput = document.createElement("input")
+///////////////////////
+        let comentarioInput = document.createElement('input')
         comentarioInput.type="text";
         comentarioInput.placeholder="Escribe una respuesta";
         comentarioInput.className ="inputComment"
 
-        let containerComentario = document.createElement("div");
+        
+        
+        
+
+        let containerComentario = document.createElement('div');
         containerComentario.className="containerComentario"
 
         containerComentario.appendChild(comentarioInput);
         containerComentario.appendChild(responderBtn);
-    
+
+        let comentarioDiv = document.createElement('div');
 
         let database = firebase.database();
 
         responderBtn.addEventListener('click', ()=>{
             let commentNuevo = {
-                    commentNuevesito:comentarioInput.value      
+                    commentNuevesito:comentarioInput.value
             }
         database.ref("publicacion/"+this.publicaciones.id+"/comentarios").push().set(commentNuevo);
         })
             
    
 
-        database.ref("publicacion/"+this.publicaciones.id+"/commentarios").on("value",function(comentario){
+        database.ref("publicacion/"+this.publicaciones.id+"/comentarios").on("value",function(comentario){
 
             comentario.forEach(commentNuevo=>{
     
@@ -62,7 +64,7 @@ class Publicacion{
                 let message = new Comentario(valor)
                 comentarioDiv.appendChild(message.render())
                 
-                console.log("this.publicaciones.commentNuevesito");
+                
             })
            
         })
@@ -73,7 +75,6 @@ class Publicacion{
 
         component.appendChild(publiCont);
         component.appendChild(userCont);
-        component.appendChild(responderBtn);
         component.appendChild(comentarioDiv);
         component.appendChild(containerComentario);
 

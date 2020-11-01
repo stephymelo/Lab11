@@ -1,4 +1,4 @@
-class Commentario{
+class Comentario{
 
 
     constructor(comentario){
@@ -13,8 +13,7 @@ class Commentario{
         let component = document.createElement("div");
         component.className="comment"
         let comment = document.createElement("div");
-        comment.className="commentinside"
-        comment.innerHTML=this.comentario.comentarioPublicado;
+        comment.innerHTML=this.comentario.commentNuevesito;
         component.appendChild(comment);
         return component;
     }
